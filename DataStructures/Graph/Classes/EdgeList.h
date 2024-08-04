@@ -498,6 +498,7 @@ public:
     template<bool VERBOSE = false>
     inline void fromDimacs(const std::string& fileBaseName, const double coordinateFactor = 1) noexcept {
         clear();
+        std::cout << fileBaseName << std::endl;
         const std::string grFilename = FileSystem::ensureExtension(fileBaseName, ".gr");
         if (VERBOSE) std::cout << "Reading dimacs graph from: " << grFilename << std::endl << std::flush;
         std::ifstream grIs(grFilename);

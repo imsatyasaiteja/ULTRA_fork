@@ -31,3 +31,6 @@ ULTRAPHASTDebug:
 ULTRAPHASTRelease:
 	$(CC) $(FLAGS) $(OPTIMIZATION) $(RELEASE) -o ULTRAPHAST ULTRAPHAST.cpp
 
+question1:
+	$(CC) $(FLAGS) $(OPTIMIZATION) $(RELEASE) -o question1 question1.cpp
+

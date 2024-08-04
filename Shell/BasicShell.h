@@ -62,10 +62,7 @@ public:
 
     ~BasicShell() {
         if (autosaveCache) saveCache();
-        while (!commands.empty()) {
-            delete commands.back();
-            commands.pop_back();
-        }
+        commands.clear();
     }
 
     inline std::string readLine(const bool isPrompt) {
@@ -320,6 +317,7 @@ public:
 
 public:
     inline bool addCommand(Command* c) {
+      
         if (Vector::contains(commands, c)) {
             return false;
         } else {
